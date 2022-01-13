@@ -10,9 +10,9 @@ for F in FILES: OUTPUT_FILES.append('../data/DF_' + F[11:])
 # read a raw data file and convert it to the proper clean DateTime index format, saved in variable 'data', then saved to file
 
 # options:
-TIME_STEP = '1s' # time step: 50ms, 1s, 1m, etc. our models ran on 1 second data files, but this file can use any timestep
+TIME_STEP = 'ommitted' # time step: ommitted etc. our models ran on ommitted second data files, but this file can use any timestep
 FILL_MISSING_TIMES = True # do you want to fill in missing times?
-FILL_MISSING_VALUES = True # do you want to forward fill NaN values?
+FILL_MISSING_VALUES = True # do you want to forward fill ommitted values?
 SAVE_CSV = True # do you want to save the dataframe as a CSV?
 
 
@@ -28,11 +28,11 @@ for FILE, OUTPUT_FILE in zip(FILES, OUTPUT_FILES):
     print("Done.")
 
     print("Rounding data to DateTimes...")
-    data.time = pd.to_datetime(data.time).dt.round(TIME_STEP) # convert time column to DateTimes and round to nearest interval
+    data.time = pd.to_datetime(data.time).dt.round(TIME_STEP) # convert ommitted column to DateTimes and round to nearest interval
     print("Done.")
 
     print("Reformatting table...")
-    data = data.pivot_table(index = 'time', columns = 'tag', values = 'value').rename_axis(None, axis = 1) # convert data format to combine time values
+    data = data.pivot_table(index = 'ommitted', columns = 'ommitted', values = 'ommitted').rename_axis(None, axis = 1) # convert data format to combine time values
     print("Done.")
 
     if FILL_MISSING_TIMES:
