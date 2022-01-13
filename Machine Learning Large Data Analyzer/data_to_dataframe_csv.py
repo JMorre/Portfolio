@@ -1,7 +1,5 @@
 # raw data file names (csv files): fill this list with all the raw csv files you're working with
-FILES = ['../rawdata/Jan3_Jan10_1s.csv', '../rawdata/Jan20_1s.csv', '../rawdata/Jan21_1s.csv',
-         '../rawdata/Jan22_1s.csv', '../rawdata/Jan23_1s.csv', '../rawdata/Jan25_1s.csv',
-         '../rawdata/Apr8.csv', '../rawdata/Apr9_10.csv']
+FILES = ['ommitted']
 
 # output file names: adjust this to set up formatting for what output your files will take
 OUTPUT_FILES = []
