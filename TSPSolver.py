@@ -69,19 +69,8 @@ class TSPSolver:
         results['pruned'] = None
         self._bssf = bssf
         return results
-
-
-    ''' <summary>
-        This is the entry point for the greedy solver, which you must implement for
-        the group project (but it is probably a good idea to just do it for the branch-and
-        bound project as a way to get your feet wet).  Note this could be used to find your
-        initial BSSF.
-        </summary>
-        <returns>results dictionary for GUI that contains three ints: cost of best solution,
-        time spent to find best solution, total number of solutions found, the best
-        solution found, and three null values for fields not used for this
-        algorithm</returns>
-    '''
+    
+    
 
     def greedy( self,time_allowance=60.0 ):
         pass
@@ -229,14 +218,6 @@ class TSPSolver:
         return results
 
 
-    ''' <summary>
-        This is the entry point for the algorithm you'll write for your group project.
-        </summary>
-        <returns>results dictionary for GUI that contains three ints: cost of best solution,
-        time spent to find best solution, total number of solutions found during search, the
-        best solution found.  You may use the other three field however you like.
-        algorithm</returns>
-    '''
 
     def fancy( self,time_allowance=60.0 ):
         pass
