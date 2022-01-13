@@ -12,9 +12,7 @@ import heapq
 import pickle
 import warnings
 
-FILES = ['../data/DF_Jan3_Jan10_1s.csv', '../data/DF_Jan20_1s.csv', '../data/DF_Jan21_1s.csv',
-         '../data/DF_Jan22_1s.csv', '../data/DF_Jan23_1s.csv', '../data/DF_Jan25_1s.csv',
-         '../data/DF_Apr8.csv', '../data/DF_Apr9_10.csv']
+FILES = ['ommitted']
 
 ## main process ##
 
@@ -28,10 +26,10 @@ warnings.warn = warn
 
 print("Reading data...")
 iterfiles = iter(FILES)
-data = pd.read_csv(FILES[0], index_col = 'time')
+data = pd.read_csv(FILES[0], index_col = 'ommitted')
 next(iterfiles)
 for file in iterfiles:
-    data = pd.concat([data, pd.read_csv(file, index_col = 'time')])
+    data = pd.concat([data, pd.read_csv(file, index_col = 'ommitted')])
 print("Done.")
 
 # filter downtime, duplicates
@@ -114,19 +112,19 @@ importances = np.zeros(X.shape[1])
 for e in rfc.estimators_:
     importances += e.feature_importances_
 
-# get all 72 top importance features, sorted by best
-best = heapq.nlargest(72, enumerate(importances), key = lambda x: x[1])
-content = 'Tag,Description,Score\n'
+# get all ommitted top importance features, sorted by best
+best = heapq.nlargest(ommitted, enumerate(importances), key = lambda x: x[1])
+content = 'ommitted,ommitted,Score\n'
 for i, b in enumerate(best):
     best[i] = list(b)
     best[i][0] = X.columns[best[i][0]]
     content += (best[i][0] + "," + TAG_DESC[best[i][0]] + "," + str(best[i][1]) + "\n")
 
-# save the tag name, importance score
+# save the ommitted name, importance score
 with open('../output/tag_scores.csv', 'w', newline = '') as file:
     file.write(content[:-1])
     file.close()
 
-print("tags in order of importance score saved")
+print("ommitted in order of importance score saved")
 
 print("All done.")
