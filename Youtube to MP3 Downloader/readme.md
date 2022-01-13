@@ -1,0 +1,2 @@
+This no longer works, since youtube has since changed their url scheme, and it never implemented a decryption scheme for youtube's video security anyway.  But it used to be an all in one program for taking a url, detecting its playlist, downloading all videos, and using ffmpeg to convert them to mp3 files.  
+I've always meant to come back to this one and find out how to decrypt these video urls, but that's a difficult project that would take a very long time.  VLC media player can do it... but not sure I can.
