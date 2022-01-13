@@ -1,1 +1,0 @@
-Web development projects; admittedly none of these sites are currently available anywhere, as they are all exercises and personal projects, but they demonstrate proficiency with HTML, CSS, JavaScript, MongoDB, NodeJS, and Vue.
