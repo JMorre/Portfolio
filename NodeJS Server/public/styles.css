@@ -1,0 +1,180 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Palatino Linotype";
+  background: #efefef;
+}
+
+body div.header {
+  display: flex;
+  flex-direction: column;
+  font-family: "Palatino Linotype";
+  background-color: #c10000;
+  color: #efefef;
+  justify-content: center;
+  align-items: center;
+}
+
+body div.header a {
+  text-decoration: none;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+body a.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  text-decoration: none;
+  background-color: #c10000;
+  color: #efefef;
+  font-size: 14px;
+  font-family: "Palatino Linotype";
+}
+
+.create, .update {
+  margin: 5%;
+}
+
+img {
+  max-height: 30vh;
+  align-content: center;
+}
+
+.mlist {
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+.list {
+  min-height: 20px;
+}
+
+.list:hover {
+  background-color: #c10000;
+  color: #efefef;
+}
+
+.explanation {
+  font-family: "Palatino Linotype";
+  color: #black;
+  margin: 50px;
+}
+
+.Error {
+  color: red;
+}
+
+.homelist {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+div#edit {
+  font-family: "Palatino Linotype"
+}
+
+input, textarea {
+  font-family: "Palatino Linotype"
+}
+
+h2 {
+  font-weight: normal;
+  color: #c10000;
+}
+
+.modal {
+  box-sizing: border-box;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalContent {
+  margin: auto;
+  display: block;
+}
+
+#description {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modalContent, #description {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p.movTitle {
+  color: #efefef;
+  font-size: 1.5em;
+}
+
+p.movDesc {
+  color: #efefef;
+  font-size: 1em;
+  white-space: pre-line;
+  width: 80%;
+}
+
+img.modalContent {
+  height: 100%;
+  max-height: none;
+}
+
+.posterposter {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  display: block;
+}

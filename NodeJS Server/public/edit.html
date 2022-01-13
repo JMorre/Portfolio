@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <title>List Edit</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Edit Movie List</h1>
+    <br>
+    <a href="index.html">Back to Movie List</a>
+  </div>
+  <div id="edit">
+    <div class="explanation">
+      <p>Use the first form to add a new movie to the list, be sure to upload an image to go along with it.  Use the second form to delete a movie from the list, or edit the title, review, or image associated with one.</p>
+    </div>
+    <div class="create">
+      <div class="form">
+        <input v-model="title" placeholder="Title of Film">
+        <p></p>
+        <textarea v-model="description" placeholder="Description/Review"></textarea>
+        <p></p>
+        <input type="file" name="poster" @change="fileChanged">
+        <button @click="upload">Upload</button>
+        <p></p>
+        <div class="Error" v-if="upError">Make sure you have a poster image, title, and description.</div>
+      </div>
+      <div class="upload" v-if="createItem">
+        <h2>{{createItem.title}}</h2>
+        <img :src="createItem.path">
+      </div>
+    </div>
+    <hr>
+    <div class="update">
+      <div class="form">
+        <div class="mlist">
+          <div class="list" v-for="l in list" @click="selectItem(l)">{{l.title}}
+          </div>
+        </div>
+      </div>
+      <div class="upload" v-if="findItem">
+        <input v-model="findItem.title">
+        <p></p>
+        <img :src="uItem.path" v-if="uItem">
+        <img :src="findItem.path" v-else>
+        <p></p>
+        <input type="file" name="poster" @change="fileChanged">
+        <button @click="uupload">Upload</button>
+        <p></p>
+        <div class="Error" v-if="uupError">Make sure you have a poster image, title, and description.</div>
+        <p></p>
+        <textarea v-model="findItem.description"></textarea>
+      </div>
+      <div class="actions" v-if="findItem">
+        <button @click="deleteItem(findItem)">Delete</button>
+        <button @click="updateItem(findItem)">Update</button>
+      </div>
+    </div>
+  </div>
+  <a class="footer" href="https://github.com/JMorre">GitHub</a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="edit.js"></script>
+</body>
+
+</html>
