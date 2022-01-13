@@ -1,0 +1,47 @@
+body h1 {
+  margin: 3%;
+  font-family: 'Great Vibes';
+  font-weight: 200;
+  font-size: 3em;
+}
+
+body div#Output h2 {
+  margin: 3%;
+  margin-bottom: 1%;
+  font-family: 'Great Vibes';
+  font-weight: 50;
+  font-size: 2em;
+}
+
+body p, form {
+  margin: 3%;
+  font-family: calibri;
+}
+
+body form input#UserSubmit {
+  margin-left: 276px;
+}
+
+body div#Output {
+  margin: 3%;
+  font-family: calibri;
+  margin-bottom: 100px;
+}
+
+body div#Output p {
+  margin: 0;
+  margin-left: 4%;
+}
+
+a.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  text-decoration: none;
+  background-color: #5a6270;
+  color: #efefef;
+  font-size: 14px;
+  font-family: calibri;
+}

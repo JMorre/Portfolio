@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sentence Gibberishizer</title>
+</head>
+
+<body>
+  <h1>Sentence Gibberishizer</h1>
+  <p>This utility takes a sentence, then requests synonyms and antonyms for most of its words from the Merriam Webster thesaurus API.  It swaps out its words and produces two sentences, the first composed of synonyms, the second composed of antonyms.  It preserves punctuation, structure, any capital words, and most short common words like 'a' or 'it'.  It requires correctly spelled words to work.<br>
+  <br>Note that any word for which the API cannot produce a satisfactory synonym or antonym will keep its original value, this is not a mistake.<br>
+  <br>Note also, this will make your sentence better.  Use it liberally in academic and creative writing.<br><br></p>
+  <form>
+    <label id="input">Enter coherent sentence: </label>
+    <input id="UserInput" type="text"></input><br />
+    <input id="UserSubmit" type="submit" value="Submit"></input>
+  </form>
+
+  <div id="Output">
+  </div>
+
+  <a class="footer" href="https://github.com/JMorre">GitHub</a>
+  <script text="type/javascript" src="script.js">
+  </script>
+</body>
+
+</html>
