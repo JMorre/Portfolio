@@ -21,7 +21,7 @@ from rfc_methods import DEFECT_TAGS
 import warnings
 
 # Use just one file, to test faster
-FILES = ['../data/DF_Apr9_10.csv']
+FILES = ['ommitted']
 
 
 
@@ -30,10 +30,10 @@ FILES = ['../data/DF_Apr9_10.csv']
 # read in all files to one dataframe
 
 iterfiles = iter(FILES)
-data = pd.read_csv(FILES[0], index_col = 'time')
+data = pd.read_csv(FILES[0], index_col = 'ommitted')
 next(iterfiles)
 for file in iterfiles:
-    data = pd.concat([data, pd.read_csv(file, index_col = 'time')])
+    data = pd.concat([data, pd.read_csv(file, index_col = 'ommitted')])
 
 # filter downtime, duplicates
 data = remove_line_downtime(data)
