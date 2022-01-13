@@ -11,7 +11,7 @@ import pandas as pd
 from rfc_methods import DEFECT_TAGS
 
 def evaluate_point(rfc, data_point):
-    return rfc.predict(data_point.to_frame().T.drop(DEFECT_TAGS, axis = 1))[0]
+    return rfc.predict(data_point.to_frame().T.drop(ommitted, axis = 1))[0]
 
 
 
@@ -27,14 +27,14 @@ print("Done.")
 
 # This block, for example purposes, reads a CSV data file and selects a single point, then predicts its output class
 
-FILES = ['../data/DF_Apr9_10.csv']
+FILES = ['ommitted']
 
 print("Reading data...")
 iterfiles = iter(FILES)
-data = pd.read_csv(FILES[0], index_col = 'time')
+data = pd.read_csv(FILES[0], index_col = 'ommitted')
 next(iterfiles)
 for file in iterfiles:
-    data = pd.concat([data, pd.read_csv(file, index_col = 'time')])
+    data = pd.concat([data, pd.read_csv(file, index_col = 'ommitted')])
 print("Done.")
 
 print("Selecting point...")
