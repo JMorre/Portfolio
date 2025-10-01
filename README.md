@@ -1,5 +1,5 @@
-# Portfolio
-A portfolio of some of my coding projects and exercises.  
+# Academic Portfolio
+A portfolio of some of my coding projects and exercises from university years  
   
 Java Server and Datalog Parsing Program are examples of implementing mid sized multidirectory projects in Java and C++.  
 Database Website Frontend, JavaScript Sentence Improver, NodeJS Server, and Vue QuoteShare are examples of web development and associated tools.  
